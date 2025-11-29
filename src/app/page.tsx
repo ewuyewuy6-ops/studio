@@ -1,3 +1,19 @@
+import { AboutSection } from '@/components/sections/about';
+import { ContactSection } from '@/components/sections/contact';
+import { HeroSection } from '@/components/sections/hero';
+import { ProjectsSection } from '@/components/sections/projects';
+import { SkillsSection } from '@/components/sections/skills';
+import { Footer } from '@/components/layout/footer';
+
 export default function Home() {
-  return <></>;
+  return (
+    <div className="flex flex-col">
+      <HeroSection />
+      <AboutSection />
+      <SkillsSection />
+      <ProjectsSection />
+      <ContactSection />
+      <Footer />
+    </div>
+  );
 }
