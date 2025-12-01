@@ -3,9 +3,9 @@ import { ProjectCard } from "@/components/ui/project-card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
-const projectsData = [
+const allProjectsData = [
   {
     title: "E-commerce Platform",
     description: "A full-featured e-commerce site with product listings, cart functionality, and a checkout process.",
@@ -38,17 +38,35 @@ const projectsData = [
     githubUrl: "#",
     liveUrl: "#",
   },
+    {
+    title: "Project Alpha",
+    description: "An innovative solution for modern problems, built with cutting-edge technology.",
+    tags: ["Svelte", "GraphQL", "Rust"],
+    image: PlaceHolderImages.find(p => p.id === 'project-1')!,
+    githubUrl: "#",
+    liveUrl: "#",
+  },
+  {
+    title: "Project Beta",
+    description: "A mobile-first social networking application with a focus on user engagement.",
+    tags: ["React Native", "Firebase", "TypeScript"],
+    image: PlaceHolderImages.find(p => p.id === 'project-2')!,
+    githubUrl: "#",
+    liveUrl: "#",
+  },
 ];
 
-export function ProjectsSection() {
+export default function ProjectsPage() {
   return (
-    <Section id="projects" className="bg-secondary/30">
-      <SectionTitle>My Projects</SectionTitle>
-      <SectionSubtitle>
-        A selection of my work. Click to see the code or a live demo.
-      </SectionSubtitle>
+    <Section id="all-projects" className="py-24 md:py-32">
+        <div className="text-center">
+            <SectionTitle>All Projects</SectionTitle>
+            <SectionSubtitle>
+                Here is a complete list of my work.
+            </SectionSubtitle>
+        </div>
       <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projectsData.map((project, index) => (
+        {allProjectsData.map((project, index) => (
           <ProjectCard 
             key={project.title} 
             project={project} 
@@ -58,10 +76,10 @@ export function ProjectsSection() {
         ))}
       </div>
       <div className="mt-16 text-center">
-        <Button asChild size="lg">
-          <Link href="/projects">
-            Show More
-            <ArrowRight className="ml-2 h-5 w-5" />
+        <Button asChild variant="outline">
+          <Link href="/#projects">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to Home
           </Link>
         </Button>
       </div>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MoveRight } from "lucide-react";
+import { MoveRight, Eye, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/ui/section";
 import { Typewriter } from "@/components/ui/typewriter";
@@ -34,7 +34,16 @@ export function HeroSection() {
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link href="#contact">Get In Touch</Link>
+              <Link href="/resume.pdf" target="_blank">
+                <Eye className="mr-2 h-5 w-5" />
+                Preview Resume
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="secondary">
+              <Link href="/resume.pdf" download>
+                <Download className="mr-2 h-5 w-5" />
+                Download Resume
+              </Link>
             </Button>
           </div>
         </div>
