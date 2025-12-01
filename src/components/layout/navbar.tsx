@@ -48,7 +48,7 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="md:hidden">
+        <div className="flex items-center gap-2 md:hidden">
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
