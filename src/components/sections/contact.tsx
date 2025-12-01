@@ -30,6 +30,15 @@ export function ContactSection() {
       </SectionSubtitle>
 
       <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <Card className="bg-card/50 backdrop-blur-sm animate-in fade-in zoom-in" style={{ animationDelay: '300ms', animationFillMode: 'backwards' }}>
+            <CardHeader>
+                <CardTitle className="text-2xl">Send a Message</CardTitle>
+            </CardHeader>
+            <CardContent>
+                <ContactForm />
+            </CardContent>
+        </Card>
+
         <div className="space-y-8">
             {contactInfo.map((info, index) => (
             <div
@@ -51,15 +60,6 @@ export function ContactSection() {
             </div>
             ))}
         </div>
-
-        <Card className="bg-card/50 backdrop-blur-sm animate-in fade-in zoom-in" style={{ animationDelay: '300ms', animationFillMode: 'backwards' }}>
-            <CardHeader>
-                <CardTitle className="text-2xl">Send a Message</CardTitle>
-            </CardHeader>
-            <CardContent>
-                <ContactForm />
-            </CardContent>
-        </Card>
       </div>
     </Section>
   );
