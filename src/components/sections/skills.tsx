@@ -1,19 +1,19 @@
 import { Section, SectionTitle, SectionSubtitle } from "@/components/ui/section";
 import { SkillCard } from "@/components/ui/skill-card";
-import { Code, Database, Wind, Server, PenTool, Smartphone, GitBranch, Rocket, Cloud, Settings } from 'lucide-react';
+import { Code, Database, Wind, Server, PenTool, Smartphone, GitBranch, Rocket, Cloud } from 'lucide-react';
 
 const skillsData = [
   { name: "JavaScript", icon: Code },
   { name: "TypeScript", icon: Code },
   { name: "React", icon: Code },
   { name: "Next.js", icon: Code },
+  { name: "React Native", icon: Smartphone },
   { name: "Node.js", icon: Server },
+  { name: "Express.js", icon: Server },
   { name: "Tailwind CSS", icon: Wind },
   { name: "Figma", icon: PenTool },
-  { name: "Responsive Design", icon: Smartphone },
   { name: "Firebase", icon: Cloud },
   { name: "Git", icon: GitBranch },
-  { name: "Vercel", icon: Rocket },
   { name: "SQL & NoSQL", icon: Database },
 ];
 
